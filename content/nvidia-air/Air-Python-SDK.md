@@ -3404,6 +3404,47 @@ Create a new topology. The caller must provide either `dot` (recommended) or `js
 ```
 
 
+## TopologyFile
+
+Manage a topology file
+
+
+<a name="air_sdk.topology.TopologyFileApi"></a>
+## TopologyFileApi
+
+High-level interface for the TopologyFile API
+
+<a name="air_sdk.topology.TopologyFileApi.get"></a>
+### get
+
+Get an existing topology file
+
+**Arguments**:
+
+- `file_id` _str_ - TopologyFile ID
+- `kwargs` _dict, optional_ - All other optional keyword arguments are applied as query
+  parameters/filters
+  
+
+**Returns**:
+
+  [`TopologyFile`](#topologyfile)
+  
+
+**Raises**:
+
+  [`AirUnexpectedresponse`](#airunexpectedresponse) - API did not return a 200 OK
+  or valid response JSON
+  
+
+**Example**:
+
+```
+>>> air.topology_files.get('5cec8f3b-f449-47a3-a6ee-c5b81bf92ccf')
+<TopologyFile 5cec8f3b-f449-47a3-a6ee-c5b81bf92ccf>
+```
+
+
 ## Worker
 
 Manage a worker
